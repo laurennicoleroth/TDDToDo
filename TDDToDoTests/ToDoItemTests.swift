@@ -31,7 +31,18 @@ class ToDoItemTests: XCTestCase {
   func test_TodoItem_InitSetsTimestamp() {
     let dummyTimeStamp: TimeInterval = 42.0
     let item = ToDoItem(title: "Dummy", timeStamp: dummyTimeStamp)
+    do {
+      let timeStamp = try XCTUnwrap(item.timeStamp)
+      XCTAssertEqual(timeStamp, dummyTimeStamp, accuracy: 0.000_001)
+    } catch {
+      print(error)
+    }
+  }
+  
+  func test_TodoItem_whenGivenLocation_setsLocation() {
+    let dummyLocation = Location(name: "Dummy Name")
+    let item = ToDoItem(title: "Dummy Title", location: dummyLocation)
     
-    XCTAssertEqual(item.timeStamp, dummyTimeStamp)
+    XCTAssertEqual(item.location?.name, dummyLocation.name)
   }
 }
