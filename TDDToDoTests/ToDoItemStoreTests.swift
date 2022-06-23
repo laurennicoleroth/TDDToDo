@@ -38,6 +38,6 @@ class ToDoItemStoreTests: XCTestCase {
     wait(for: [publisherExpectation], timeout: 1)
     token.cancel()
     
-    XCTAssertEqual(receivedItems.first?.title, toDoItem.title)
+    XCTAssertEqual(receivedItems, [toDoItem])
   }
 }
