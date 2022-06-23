@@ -33,6 +33,4 @@ class LocationTests: XCTestCase {
     XCTAssertEqual(resultCoordinate.longitude, 2, accuracy: 0.000_001)
   }
   
-  
-  
 }
