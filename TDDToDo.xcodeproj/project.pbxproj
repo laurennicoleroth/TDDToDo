@@ -21,6 +21,7 @@
 		2DE7F8FC2864DA4A0094AE81 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8FB2864DA490094AE81 /* LocationTests.swift */; };
 		2DE7F8FE2864E20D0094AE81 /* ToDoItemStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8FD2864E20D0094AE81 /* ToDoItemStoreTests.swift */; };
 		2DE7F9002864E3F70094AE81 /* ToDoItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8FF2864E3F70094AE81 /* ToDoItemStore.swift */; };
+		2DE7F902286500F20094AE81 /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F901286500F20094AE81 /* StorageProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		2DE7F8FB2864DA490094AE81 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		2DE7F8FD2864E20D0094AE81 /* ToDoItemStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemStoreTests.swift; sourceTree = "<group>"; };
 		2DE7F8FF2864E3F70094AE81 /* ToDoItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemStore.swift; sourceTree = "<group>"; };
+		2DE7F901286500F20094AE81 /* StorageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				2DE7F8F72864C8F50094AE81 /* ToDoItem.swift */,
 				2DE7F8F92864D5C80094AE81 /* Location.swift */,
 				2DE7F8FF2864E3F70094AE81 /* ToDoItemStore.swift */,
+				2DE7F901286500F20094AE81 /* StorageProvider.swift */,
 			);
 			path = TDDToDo;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE7F902286500F20094AE81 /* StorageProvider.swift in Sources */,
 				2DE7F8CC2863A08C0094AE81 /* Persistence.swift in Sources */,
 				2DE7F8C52863A08B0094AE81 /* ContentView.swift in Sources */,
 				2DE7F8F82864C8F50094AE81 /* ToDoItem.swift in Sources */,
