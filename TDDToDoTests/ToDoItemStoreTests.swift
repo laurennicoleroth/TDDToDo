@@ -11,16 +11,17 @@ import Combine
 
 class ToDoItemStoreTests: XCTestCase {
   
+  var sut: ToDoItemStore!
+  
   override func setUpWithError() throws {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    sut = ToDoItemStore()
   }
   
   override func tearDownWithError() throws {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    sut = nil
   }
   
   func test_add_shouldPublushChange() throws {
-    let sut = ToDoItemStore()
     let toDoItem = ToDoItem(title: "Dummy")
     let receivedItems = try wait(for: sut.itemPublisher) {
       sut.add(toDoItem)
@@ -30,7 +31,6 @@ class ToDoItemStoreTests: XCTestCase {
   }
   
   func test_check_shouldPublishChangeInDoneItems() throws {
-    let sut = ToDoItemStore()
     let toDoItem = ToDoItem(title: "Dummy")
     sut.add(toDoItem)
     sut.add(ToDoItem(title: "Dummy 2"))
