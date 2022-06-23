@@ -13,30 +13,37 @@ struct Location : Equatable {
     if lhs.name != rhs.name {
       return false
     }
-    if lhs.coordinate == nil, rhs.coordinate != nil {
+    if lhs.latitude == nil, rhs.latitude != nil {
       return false
     }
-    if lhs.coordinate != nil, rhs.coordinate == nil {
+    if lhs.latitude != nil, rhs.latitude == nil {
       return false
     }
     
-    if let lhsCoordinate = lhs.coordinate,
-       let rhsCoordinate = rhs.coordinate {
-      if abs(lhsCoordinate.longitude - rhsCoordinate.longitude) > 0.000_000_1 {
-        return false
-      }
-      if abs(rhsCoordinate.longitude - lhsCoordinate.longitude) > 0.000_000_1 {
-        return false
-      }
+    if lhs.longitude == nil, rhs.longitude != nil {
+      return false
     }
+    if lhs.longitude != nil, rhs.longitude == nil {
+      return false
+    }
+    
+    if abs(lhs.longitude - rhs.longitude) > 0.000_000_1 {
+      return false
+    }
+    if abs(rhs.longitude - lhs.longitude) > 0.000_000_1 {
+      return false
+    }
+    
     return true
   }
   
   let name : String
-  let coordinate : CLLocationCoordinate2D?
+  let latitude: Double
+  let longitude: Double
   
-  init(name: String, coordinate: CLLocationCoordinate2D? = nil) {
+  init(name: String, latitude: Double, longitude: Double) {
     self.name = name
-    self.coordinate = coordinate
+    self.latitude = latitude
+    self.longitude = longitude
   }
 }
