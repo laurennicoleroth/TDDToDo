@@ -20,17 +20,16 @@ class LocationTests: XCTestCase {
   }
   
   func test_Location_initSetsName() throws {
-    let location = Location(name: "Dummy")
+    let location = StorageProvider.default.findOrCreateLocation(id: UUID(), name: "Dummy", latitude: 1.0, longitude: 2.0)
     XCTAssertEqual(location.name, "Dummy")
   }
   
   func test_Location_initSetsCoordinate() throws {
-    let coordinate = CLLocationCoordinate2D(latitude: 1, longitude: 2)
-    let location = Location(name: "Dummy", coordinate: coordinate)
-    
-    let resultCoordinate = try XCTUnwrap(location.coordinate)
-    XCTAssertEqual(resultCoordinate.latitude, 1, accuracy: 0.000_001)
-    XCTAssertEqual(resultCoordinate.longitude, 2, accuracy: 0.000_001)
+
+    let location = StorageProvider.default.findOrCreateLocation(id: UUID(), name: "Dummy Name", latitude: 1.0, longitude: 2.0)
+
+    XCTAssertEqual(location.latitude, 1.0, accuracy: 0.000_001)
+    XCTAssertEqual(location.longitude, 2.0, accuracy: 0.000_001)
   }
   
 }

@@ -12,7 +12,7 @@ import Combine
 class ToDoItemStoreTests: XCTestCase {
   
   var sut: ToDoItemStore!
-  
+
   override func setUpWithError() throws {
     sut = ToDoItemStore()
   }
@@ -21,24 +21,31 @@ class ToDoItemStoreTests: XCTestCase {
     sut = nil
   }
   
-  func test_add_shouldPublushChange() throws {
-    let toDoItem = ToDoItem(title: "Dummy")
-    let receivedItems = try wait(for: sut.itemPublisher) {
-      sut.add(toDoItem)
-    }
+  func test_add_shouldAddNewItem() throws {
+    let location = StorageProvider.default.findOrCreateLocation(id: UUID(), name: "Dummy Location", latitude: 1.0, longitude: 2.0)
+    let toDoItem = StorageProvider.default.findOrCreateToDoItem(id: UUID(), title: "Dummy Title", timeStamp: Date(), location: location)
+
+    sut.add(toDoItem)
+    let items = sut.toDoItems
     
-    XCTAssertEqual(receivedItems, [toDoItem])
+    XCTAssertEqual(items.last, toDoItem)
   }
   
   func test_check_shouldPublishChangeInDoneItems() throws {
-    let toDoItem = ToDoItem(title: "Dummy")
+    let location = StorageProvider.default.findOrCreateLocation(id: UUID(), name: "Dummy", latitude: 1.0, longitude: 2.0)
+    let toDoItem = StorageProvider.default.findOrCreateToDoItem(id: UUID(), title: "Dummy Title", itemDescription: "", timeStamp: Date(), location: location, done: false)
+    let toDoItem2 = StorageProvider.default.findOrCreateToDoItem(id: UUID(), title: "Dummy 2", itemDescription: "", timeStamp: Date(), location: location, done: false)
+    
     sut.add(toDoItem)
-    sut.add(ToDoItem(title: "Dummy 2"))
+    sut.add(toDoItem2)
+    
     let receivedItems = try wait(for: sut.itemPublisher)
     {
       sut.check(toDoItem)
     }
+    
     let doneItems = receivedItems.filter({ $0.done })
+    
     XCTAssertEqual(doneItems, [toDoItem])
   }
   
