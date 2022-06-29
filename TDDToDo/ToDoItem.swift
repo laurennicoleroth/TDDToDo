@@ -12,6 +12,15 @@ enum DecoderConfigurationError: Error {
   case missingManagedObjectContext
 }
 
+struct DToDoItem {
+  let id: UUID
+  let title: String
+  let itemDescription: String?
+  let timeStamp: Date
+  let location : Location?
+  let done : Bool
+}
+
 public class ToDoItem : NSManagedObject, Codable {
   enum CodingKeys: CodingKey {
     case id, title, itemDescription, timeStamp, location, done

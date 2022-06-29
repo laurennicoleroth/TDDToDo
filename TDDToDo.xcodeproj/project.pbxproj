@@ -21,7 +21,9 @@
 		2DE7F8FE2864E20D0094AE81 /* ToDoItemStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8FD2864E20D0094AE81 /* ToDoItemStoreTests.swift */; };
 		2DE7F9002864E3F70094AE81 /* ToDoItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8FF2864E3F70094AE81 /* ToDoItemStore.swift */; };
 		2DE7F902286500F20094AE81 /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F901286500F20094AE81 /* StorageProvider.swift */; };
-		2DE7F906286647370094AE81 /* CoreDataPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F905286647370094AE81 /* CoreDataPublisher.swift */; };
+		2DE7F908286683F80094AE81 /* CoreDataSaveModelPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F907286683F80094AE81 /* CoreDataSaveModelPublisher.swift */; };
+		2DE7F90A286685CE0094AE81 /* CoreDataFetchResultsPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F909286685CE0094AE81 /* CoreDataFetchResultsPublisher.swift */; };
+		2DE7F90D2866866D0094AE81 /* CoreDataDeleteModelPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F90C2866866D0094AE81 /* CoreDataDeleteModelPublisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +61,9 @@
 		2DE7F8FD2864E20D0094AE81 /* ToDoItemStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemStoreTests.swift; sourceTree = "<group>"; };
 		2DE7F8FF2864E3F70094AE81 /* ToDoItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemStore.swift; sourceTree = "<group>"; };
 		2DE7F901286500F20094AE81 /* StorageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
-		2DE7F905286647370094AE81 /* CoreDataPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPublisher.swift; sourceTree = "<group>"; };
+		2DE7F907286683F80094AE81 /* CoreDataSaveModelPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSaveModelPublisher.swift; sourceTree = "<group>"; };
+		2DE7F909286685CE0094AE81 /* CoreDataFetchResultsPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFetchResultsPublisher.swift; sourceTree = "<group>"; };
+		2DE7F90C2866866D0094AE81 /* CoreDataDeleteModelPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDeleteModelPublisher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +122,7 @@
 				2DE7F8F72864C8F50094AE81 /* ToDoItem.swift */,
 				2DE7F8F92864D5C80094AE81 /* Location.swift */,
 				2DE7F8FF2864E3F70094AE81 /* ToDoItemStore.swift */,
-				2DE7F901286500F20094AE81 /* StorageProvider.swift */,
-				2DE7F905286647370094AE81 /* CoreDataPublisher.swift */,
+				2DE7F90B286686540094AE81 /* CoreDataSource */,
 			);
 			path = TDDToDo;
 			sourceTree = "<group>";
@@ -149,6 +152,17 @@
 				2DE7F8E42863A08C0094AE81 /* TDDToDoUITestsLaunchTests.swift */,
 			);
 			path = TDDToDoUITests;
+			sourceTree = "<group>";
+		};
+		2DE7F90B286686540094AE81 /* CoreDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				2DE7F907286683F80094AE81 /* CoreDataSaveModelPublisher.swift */,
+				2DE7F909286685CE0094AE81 /* CoreDataFetchResultsPublisher.swift */,
+				2DE7F90C2866866D0094AE81 /* CoreDataDeleteModelPublisher.swift */,
+				2DE7F901286500F20094AE81 /* StorageProvider.swift */,
+			);
+			path = CoreDataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +296,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DE7F902286500F20094AE81 /* StorageProvider.swift in Sources */,
+				2DE7F90D2866866D0094AE81 /* CoreDataDeleteModelPublisher.swift in Sources */,
+				2DE7F908286683F80094AE81 /* CoreDataSaveModelPublisher.swift in Sources */,
 				2DE7F8C52863A08B0094AE81 /* ContentView.swift in Sources */,
+				2DE7F90A286685CE0094AE81 /* CoreDataFetchResultsPublisher.swift in Sources */,
 				2DE7F8F82864C8F50094AE81 /* ToDoItem.swift in Sources */,
-				2DE7F906286647370094AE81 /* CoreDataPublisher.swift in Sources */,
 				2DE7F8CF2863A08C0094AE81 /* TDDToDo.xcdatamodeld in Sources */,
 				2DE7F8FA2864D5C80094AE81 /* Location.swift in Sources */,
 				2DE7F9002864E3F70094AE81 /* ToDoItemStore.swift in Sources */,
