@@ -11,7 +11,6 @@
 		2DE7F8C52863A08B0094AE81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8C42863A08B0094AE81 /* ContentView.swift */; };
 		2DE7F8C72863A08C0094AE81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE7F8C62863A08C0094AE81 /* Assets.xcassets */; };
 		2DE7F8CA2863A08C0094AE81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE7F8C92863A08C0094AE81 /* Preview Assets.xcassets */; };
-		2DE7F8CC2863A08C0094AE81 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8CB2863A08C0094AE81 /* Persistence.swift */; };
 		2DE7F8CF2863A08C0094AE81 /* TDDToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8CD2863A08C0094AE81 /* TDDToDo.xcdatamodeld */; };
 		2DE7F8E32863A08C0094AE81 /* TDDToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8E22863A08C0094AE81 /* TDDToDoUITests.swift */; };
 		2DE7F8E52863A08C0094AE81 /* TDDToDoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8E42863A08C0094AE81 /* TDDToDoUITestsLaunchTests.swift */; };
@@ -21,6 +20,7 @@
 		2DE7F8FC2864DA4A0094AE81 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8FB2864DA490094AE81 /* LocationTests.swift */; };
 		2DE7F8FE2864E20D0094AE81 /* ToDoItemStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8FD2864E20D0094AE81 /* ToDoItemStoreTests.swift */; };
 		2DE7F9002864E3F70094AE81 /* ToDoItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8FF2864E3F70094AE81 /* ToDoItemStore.swift */; };
+		2DE7F913286DFE2E0094AE81 /* Source in Resources */ = {isa = PBXBuildFile; fileRef = 2DE7F912286DFE2E0094AE81 /* Source */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,6 @@
 		2DE7F8C42863A08B0094AE81 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2DE7F8C62863A08C0094AE81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DE7F8C92863A08C0094AE81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2DE7F8CB2863A08C0094AE81 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		2DE7F8CE2863A08C0094AE81 /* TDDToDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TDDToDo.xcdatamodel; sourceTree = "<group>"; };
 		2DE7F8D42863A08C0094AE81 /* TDDToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDToDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE7F8DE2863A08C0094AE81 /* TDDToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +57,7 @@
 		2DE7F8FB2864DA490094AE81 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		2DE7F8FD2864E20D0094AE81 /* ToDoItemStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemStoreTests.swift; sourceTree = "<group>"; };
 		2DE7F8FF2864E3F70094AE81 /* ToDoItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemStore.swift; sourceTree = "<group>"; };
+		2DE7F912286DFE2E0094AE81 /* Source */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Source; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +110,8 @@
 			children = (
 				2DE7F8C22863A08B0094AE81 /* TDDToDoApp.swift */,
 				2DE7F8C42863A08B0094AE81 /* ContentView.swift */,
+				2DE7F912286DFE2E0094AE81 /* Source */,
 				2DE7F8C62863A08C0094AE81 /* Assets.xcassets */,
-				2DE7F8CB2863A08C0094AE81 /* Persistence.swift */,
 				2DE7F8CD2863A08C0094AE81 /* TDDToDo.xcdatamodeld */,
 				2DE7F8C82863A08C0094AE81 /* Preview Content */,
 				2DE7F8F72864C8F50094AE81 /* ToDoItem.swift */,
@@ -252,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE7F913286DFE2E0094AE81 /* Source in Resources */,
 				2DE7F8CA2863A08C0094AE81 /* Preview Assets.xcassets in Resources */,
 				2DE7F8C72863A08C0094AE81 /* Assets.xcassets in Resources */,
 			);
@@ -278,7 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DE7F8CC2863A08C0094AE81 /* Persistence.swift in Sources */,
 				2DE7F8C52863A08B0094AE81 /* ContentView.swift in Sources */,
 				2DE7F8F82864C8F50094AE81 /* ToDoItem.swift in Sources */,
 				2DE7F8CF2863A08C0094AE81 /* TDDToDo.xcdatamodeld in Sources */,
