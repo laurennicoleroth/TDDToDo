@@ -21,6 +21,9 @@
 		2DE7F8FC2864DA4A0094AE81 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8FB2864DA490094AE81 /* LocationTests.swift */; };
 		2DE7F8FE2864E20D0094AE81 /* ToDoItemStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8FD2864E20D0094AE81 /* ToDoItemStoreTests.swift */; };
 		2DE7F9002864E3F70094AE81 /* ToDoItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F8FF2864E3F70094AE81 /* ToDoItemStore.swift */; };
+		2DE7F91E286E142F0094AE81 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F91D286E142E0094AE81 /* TaskListViewModel.swift */; };
+		2DE7F920286E19980094AE81 /* AddListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F91F286E19980094AE81 /* AddListView.swift */; };
+		2DE7F922286E30F30094AE81 /* TaskListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE7F921286E30F30094AE81 /* TaskListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		2DE7F8FB2864DA490094AE81 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		2DE7F8FD2864E20D0094AE81 /* ToDoItemStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemStoreTests.swift; sourceTree = "<group>"; };
 		2DE7F8FF2864E3F70094AE81 /* ToDoItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemStore.swift; sourceTree = "<group>"; };
+		2DE7F91D286E142E0094AE81 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		2DE7F91F286E19980094AE81 /* AddListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListView.swift; sourceTree = "<group>"; };
+		2DE7F921286E30F30094AE81 /* TaskListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,9 @@
 				2DE7F8F72864C8F50094AE81 /* ToDoItem.swift */,
 				2DE7F8F92864D5C80094AE81 /* Location.swift */,
 				2DE7F8FF2864E3F70094AE81 /* ToDoItemStore.swift */,
+				2DE7F91D286E142E0094AE81 /* TaskListViewModel.swift */,
+				2DE7F91F286E19980094AE81 /* AddListView.swift */,
+				2DE7F921286E30F30094AE81 /* TaskListCell.swift */,
 			);
 			path = TDDToDo;
 			sourceTree = "<group>";
@@ -283,6 +292,9 @@
 				2DE7F8F82864C8F50094AE81 /* ToDoItem.swift in Sources */,
 				2DE7F8CF2863A08C0094AE81 /* TDDToDo.xcdatamodeld in Sources */,
 				2DE7F8FA2864D5C80094AE81 /* Location.swift in Sources */,
+				2DE7F920286E19980094AE81 /* AddListView.swift in Sources */,
+				2DE7F922286E30F30094AE81 /* TaskListCell.swift in Sources */,
+				2DE7F91E286E142F0094AE81 /* TaskListViewModel.swift in Sources */,
 				2DE7F9002864E3F70094AE81 /* ToDoItemStore.swift in Sources */,
 				2DE7F8C32863A08B0094AE81 /* TDDToDoApp.swift in Sources */,
 			);
