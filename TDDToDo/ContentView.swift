@@ -18,15 +18,25 @@ struct ContentView: View {
   var body: some View {
     NavigationView {
       List() {
-        ForEach(fetchedTaskList) { taskList in
-          TaskListCell(taskList: taskList)
+        Section("Favorite") {
+          ForEach(fetchedTaskList.filter { $0.isFavorite == true }) { taskList in
+            TaskListCell(taskList: taskList)
+          }
         }
+        Section("Tasks") {
+          ForEach(fetchedTaskList.filter { $0.isFavorite == false }) { taskList in
+            TaskListCell(taskList: taskList)
+          }
+        }
+        
       }
       .sheet(isPresented: $addView, content: {
         AddListView(addView: $addView)
       })
       .toolbar {
         Button {
+          taskListVM.taskListTitle = ""
+          taskListVM.taskList = nil
           addView.toggle()
         } label: {
           Label("Add Item", systemImage: "plus")

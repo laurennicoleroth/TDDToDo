@@ -18,14 +18,17 @@ struct AddListView: View {
       Form {
         VStack {
           TextField("Enter title", text: $taskListVM.taskListTitle)
+          
           Button(action: {
             taskListVM.createTask(context: viewContext)
             addView.toggle()
           }) {
-            Text("Add item")
+           
+            Text(taskListVM.taskList == nil ? "Add item" : "Update Item").frame(minWidth: 0, maxWidth: .infinity)
+            
           }
         }
-      }
+      }.navigationTitle(taskListVM.taskList == nil ? "Add Item" : "Edit")
     }
   }
 }

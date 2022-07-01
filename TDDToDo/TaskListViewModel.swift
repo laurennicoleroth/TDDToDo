@@ -8,18 +8,26 @@
 import Foundation
 import Combine
 import CoreData
+import SwiftUI
 
 class TaskListViewModel: ObservableObject {
   @Published var taskListTitle = ""
+  @Published var taskList: TaskList!
   
   func createTask(context: NSManagedObjectContext) {
-    let task = TaskList(context: context)
-    task.title = taskListTitle
-    task.isDone = false
-    task.isFavorite = false
-    task.date = Date()
-    task.id = UUID()
+    if taskList == nil {
+      let task = TaskList(context: context)
+      task.title = taskListTitle
+      task.isDone = false
+      task.isFavorite = false
+      task.date = Date()
+      task.id = UUID()
+    } else {
+      taskList.title = taskListTitle
+    }
+    
     save(context: context)
+    taskListTitle = ""
   }
   
   func save(context: NSManagedObjectContext) {
@@ -28,5 +36,24 @@ class TaskListViewModel: ObservableObject {
     } catch {
       print(error)
     }
+  }
+  
+  func delete(task: TaskList, context: NSManagedObjectContext) {
+    context.delete(task)
+    save(context: context)
+  }
+  
+  func editList(task: TaskList) {
+    taskList = task
+  }
+  
+  func toggleFavorite(task: TaskList, context: NSManagedObjectContext) {
+    task.isFavorite.toggle()
+    save(context: context)
+  }
+  
+  func toggleDone(task: TaskList, context: NSManagedObjectContext) {
+    task.isDone.toggle()
+    save(context: context)
   }
 }
